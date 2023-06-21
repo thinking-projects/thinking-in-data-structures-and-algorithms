@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.thinking-projects</groupId>
+    <artifactId>thinking-in-data-structures-and-algorithms</artifactId>
+    <version>${revision}</version>
+    <packaging>jar</packaging>
+
+    <name>Thinking Project :: Data Structures and Algorithms</name>
+    <description>Thinking in data-structures-and-algorithms.</description>
+
+    <developers>
+        <developer>
+            <id>authoralankay</id>
+            <name>authoralankay</name>
+            <email>authoralankay@gmail.com</email>
+            <organization>Zephyr</organization>
+            <roles>
+                <role>lead</role>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <properties>
+        <!-- Basic -->
+        <revision>0.0.1-SNAPSHOT</revision>
+        <java.version>8</java.version>
+        <!-- Maven -->
+        <maven-compiler-version>3.5.1</maven-compiler-version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <!-- Test -->
+        <junit-version>5.9.2</junit-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                    <fork>true</fork>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
